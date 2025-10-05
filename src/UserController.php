@@ -1,4 +1,6 @@
 <?php
+
+namespace PhpLectures;
 // UserController.php
 class UserController {
     private UserService $userService;
@@ -12,5 +14,3 @@ class UserController {
         include 'views/users_list.php';
     }
 }
-
-?>

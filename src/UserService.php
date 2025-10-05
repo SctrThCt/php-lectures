@@ -1,5 +1,10 @@
 <?php
 
+namespace PhpLectures;
+
+use PhpLectures\User;
+use PhpLectures\DTO\UserDTO;
+use PhpLectures\DTO\CreateUserDTO;
 // UserService.php
 class UserService {
     private UserRepository $repo;
@@ -18,5 +23,3 @@ class UserService {
         $this->repo->save($user);
     }
 }
-
-?>

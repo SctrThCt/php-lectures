@@ -1,0 +1,11 @@
+{
+    "name": "stc/php-lectures",
+    "description": "php-lectures",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "PhpLectures\\": "src/"
+        }
+    },
+    "require": {}
+}

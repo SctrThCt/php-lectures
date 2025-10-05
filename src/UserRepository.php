@@ -1,16 +1,17 @@
 <?php
 
+namespace PhpLectures;
 // UserRepository.php
 class UserRepository {
-    private PDO $db;
+    private \PDO $db;
 
-    public function __construct(PDO $db) {
+    public function __construct(\PDO $db) {
         $this->db = $db;
     }
 
     public function findAll(): array {
         $stmt = $this->db->query("SELECT id, name FROM users");
-        return array_map(fn($r) => new User($r['id'], $r['name']), $stmt->fetchAll());
+        return array_map(fn($r) => new User( $r['name']), $stmt->fetchAll());
     }
 
     public function save(User $user): void {
@@ -18,5 +19,3 @@ class UserRepository {
         $stmt->execute(['name' => $user->name]);
     }
 }
-
-?>
