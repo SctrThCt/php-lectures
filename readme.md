@@ -16,8 +16,8 @@
 
 ## 2) Конфигурация проекта
 
-*  Добавить `config.php` с секциями:
-
+*  Добавить `config.php`, который возвращает ассоциативный массив
+ 
   * `db.dsn`, `db.user`, `db.pass`, `db.options`
   * `storage.file` → путь к `storage/tasks.json`
   * `repository` → `mysql | file | memory`
